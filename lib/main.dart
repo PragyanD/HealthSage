@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: Color.fromARGB(234, 37, 37, 37),
           title: const Text('HealthSage'),
           ),
         floatingActionButton: FloatingActionButton(
@@ -57,10 +57,17 @@ class _MyAppState extends State<MyApp> {
           },
         ),
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: const Color.fromARGB(255, 14, 66, 16),
+          unselectedLabelStyle: const TextStyle(color: Colors.white, fontSize: 14),
+          fixedColor: Colors.white,
+          unselectedItemColor: Colors.white,
+
+          
           items: const[
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home'
+              
       
             ),
             BottomNavigationBarItem(
@@ -83,12 +90,24 @@ class _MyAppState extends State<MyApp> {
           // },
         ),
         drawer: const Drawer(
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: Color.fromARGB(255, 41, 40, 40),
           child: Text('Yo!'),
         ),
-        body:
-            ListView(
-              children: [Container(
+        body: Container(
+        decoration: BoxDecoration(
+          gradient: RadialGradient(
+                center: Alignment.center, // near the top right
+                radius: 0.2,
+                colors: <Color>[
+                  Colors.white, 
+                  Colors.green,
+                  Color.fromARGB(234, 37, 37, 37), 
+                ],
+                stops: <double>[-.7, 45,210],
+          ),
+        ),
+            child: ListView(
+                children: [Container(
                   
                   padding: EdgeInsets.all(9.0),
                   margin:EdgeInsets.all(50),
@@ -135,15 +154,17 @@ class _MyAppState extends State<MyApp> {
                       //   builder: (_) => Pomodoro(),
                       //   )
                       // );
-                      count++;
+                      setState(() {
+                         count++;
+                    });
                     },
                     )
-                
+            
 
               ],
             ),
         ),
-      
+      )
     );
   }
 }
