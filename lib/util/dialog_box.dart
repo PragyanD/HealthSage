@@ -37,6 +37,8 @@ class DialogBox extends StatelessWidget {
             ),
 
           ),
+          //padding for save cancel
+          const SizedBox(height:30),
           //save and cancel buttons
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

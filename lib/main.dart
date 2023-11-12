@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-
+import 'package:hive_flutter/hive_flutter.dart';
 import 'homePage.dart';
 
-void main(){
+void main() async {
+  //init hive
+  await Hive.initFlutter();
+
+  //open a box
+  var box = await Hive.openBox('mybox');
   runApp(MyApp());
+
 }
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -19,6 +25,7 @@ class _MyAppState extends State<MyApp> {
     // TODO: implement initState
     super.initState();
   }
+
   void dispose() {
     // TODO: implement dispose
     super.dispose();
