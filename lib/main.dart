@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'homePage.dart';
+import 'pomodoro.dart';
 
 void main() async {
   //init hive
@@ -35,7 +36,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: pomodoroPage(),
       theme: ThemeData(primarySwatch: Colors.green)
     );
   }

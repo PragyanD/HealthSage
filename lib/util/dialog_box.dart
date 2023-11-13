@@ -46,6 +46,7 @@ class DialogBox extends StatelessWidget {
             Button1(
               text: "Save", 
               onPressed: onSave,
+              
               ),
               const SizedBox(width:10),
             Button1(
