@@ -1,5 +1,7 @@
+import "dart:async";
+
 import "package:flutter/material.dart";
-import "./util/timer_state.dart";
+import "./util/_MyTimerState.dart";
 class pomodoroPage extends StatefulWidget {
   const pomodoroPage({super.key});
 
@@ -15,7 +17,9 @@ class _pomodoroPageState extends State<pomodoroPage> {
         title: Text('Pomodoro'),
       
       ),
-      body: _MyTimerState
+      body: Timer(
+
+      ),
     );
   }
 }
