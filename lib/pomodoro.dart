@@ -9,6 +9,29 @@ class pomodoroPage extends StatefulWidget {
 }
 
 class _pomodoroPageState extends State<pomodoroPage> {
+  //pomodoro duration(25 minutes)
+  static const int pomodoroDuration = 25*60;
+  Timer? _timer;
+  int _start = 25 * 60;
+  
+  void startTimer() {
+    const oneSec = Duration(seconds: 1);
+    _timer = Timer.periodic(
+      oneSec,
+      (Timer timer) {
+        if (_start == 0) {
+          setState(() {
+            timer.cancel();
+          });
+        } else {
+          setState(() {
+            _start--;
+          });
+        }
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +40,7 @@ class _pomodoroPageState extends State<pomodoroPage> {
       
       ),
       body: Container(
-        
+      
         ),
       backgroundColor: Colors.red[00],
 
