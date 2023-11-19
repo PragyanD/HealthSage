@@ -36,8 +36,11 @@ class _pomodoroPageState extends State<pomodoroPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pomodoro'),
-      
+        title: Center(child: Text('Pomodoro')),
+        elevation: 0, 
+        actions: [],
+
+        
       ),
       body: Container(
       
