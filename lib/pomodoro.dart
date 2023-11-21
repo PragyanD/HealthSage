@@ -42,7 +42,14 @@ class _pomodoroPageState extends State<pomodoroPage> {
 
         
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => {},//modify
+        backgroundColor: Colors.red[400],
+        foregroundColor: Colors.white,
+
+      ),
       body: Container(
+        
       
         ),
       backgroundColor: Colors.red[00],
