@@ -28,9 +28,11 @@ class _pomodoroPageState extends State<pomodoroPage> {
             _start--;
           });
         }
-      },
-    );
+      }
+  );
+    
   }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +42,8 @@ class _pomodoroPageState extends State<pomodoroPage> {
         elevation: 0, 
         actions: [],
 
-        
       ),
+      
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},//modify
         backgroundColor: Colors.red[400],
