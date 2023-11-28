@@ -37,6 +37,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: pomodoroPage(),
+      darkTheme: ThemeData.dark(),
       theme: ThemeData(primarySwatch: Colors.green)
     );
   }
