@@ -51,7 +51,14 @@ class _pomodoroPageState extends State<pomodoroPage> {
 
       ),
       body: Container(
-        
+        child: CalendarDatePicker(
+          firstDate: DateTime(2023, 11,11,11,30),
+          initialDate: DateTime.now(),
+          lastDate: DateTime(2024),
+          onDateChanged:(value) {
+
+          }, 
+          ),
       
         ),
       backgroundColor: Colors.red[00],
