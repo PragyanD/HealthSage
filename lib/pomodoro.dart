@@ -47,19 +47,20 @@ class _pomodoroPageState extends State<pomodoroPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},//modify
         backgroundColor: Colors.red[400],
-        foregroundColor: Colors.white,
+        hoverColor: Colors.green[300],
+        elevation: 5,
 
       ),
+      
       body: Container(
         child: CalendarDatePicker(
           firstDate: DateTime(2023, 11,11,11,30),
           initialDate: DateTime.now(),
           lastDate: DateTime(2024),
           onDateChanged:(value) {
-
+            
           }, 
-          ),
-      
+        ),
         ),
       backgroundColor: Colors.red[00],
 
