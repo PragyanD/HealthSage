@@ -1,5 +1,5 @@
 import "dart:async";
-import "./util/timer_card.dart";
+import 'util/header1.dart';
 import "package:flutter/material.dart";
 class pomodoroPage extends StatefulWidget {
   const pomodoroPage({super.key});
@@ -57,7 +57,7 @@ class _pomodoroPageState extends State<pomodoroPage> {
       
       body: Center(
         heightFactor: 4,
-        child: timer_card()
+        child: header1(label: "Time left")
         ),
       backgroundColor: Colors.red[00],
 
