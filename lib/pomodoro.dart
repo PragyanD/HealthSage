@@ -1,5 +1,5 @@
 import "dart:async";
-
+import "./util/timer_card.dart";
 import "package:flutter/material.dart";
 class pomodoroPage extends StatefulWidget {
   const pomodoroPage({super.key});
@@ -38,7 +38,10 @@ class _pomodoroPageState extends State<pomodoroPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Pomodoro')),
+        backgroundColor: Colors.redAccent,
+        title: Center(
+        child: Text('Pomodoro'),
+        ),
         elevation: 0, 
         actions: [],
 
@@ -52,15 +55,9 @@ class _pomodoroPageState extends State<pomodoroPage> {
 
       ),
       
-      body: Container(
-        child: CalendarDatePicker(
-          firstDate: DateTime(2023, 11,11,11,30),
-          initialDate: DateTime.now(),
-          lastDate: DateTime(2024),
-          onDateChanged:(value) {
-            
-          }, 
-        ),
+      body: Center(
+        heightFactor: 4,
+        child: timer_card()
         ),
       backgroundColor: Colors.red[00],
 
