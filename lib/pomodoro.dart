@@ -57,7 +57,13 @@ class _pomodoroPageState extends State<pomodoroPage> {
 
       ),
       
-      body: header1(label: "Time left"),
+      body: TimePickerDialog(
+        initialTime: TimeOfDay(
+          hour: 0, 
+          minute: 0
+          ),
+          ), 
+      //header1(label: "Time left"),
       
       backgroundColor: Colors.red[00],
 
