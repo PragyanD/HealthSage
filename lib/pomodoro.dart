@@ -43,7 +43,9 @@ class _pomodoroPageState extends State<pomodoroPage> {
         child: Text('Pomodoro'),
         ),
         elevation: 0, 
-        actions: [],
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.refresh))
+        ],
 
       ),
       
@@ -55,10 +57,8 @@ class _pomodoroPageState extends State<pomodoroPage> {
 
       ),
       
-      body: Center(
-        heightFactor: 4,
-        child: header1(label: "Time left")
-        ),
+      body: header1(label: "Time left"),
+      
       backgroundColor: Colors.red[00],
 
       );
