@@ -1,4 +1,6 @@
 import "dart:async";
+import "package:firstly/util/time_input.dart";
+
 import 'util/header1.dart';
 import "package:flutter/material.dart";
 class pomodoroPage extends StatefulWidget {
@@ -57,12 +59,15 @@ class _pomodoroPageState extends State<pomodoroPage> {
 
       ),
       
-      body: TimePickerDialog(
-        initialTime: TimeOfDay(
-          hour: 0, 
-          minute: 0
-          ),
-          ), 
+        body: Center(child: time_input(minute :23)), 
+      // TimePickerDialog(
+      //   initialTime: TimeOfDay(
+      //     hour: 0, 
+      //     minute: 0
+      //     ),
+      //     initialEntryMode : TimePickerEntryMode.inputOnly,
+
+      //     ), 
       //header1(label: "Time left"),
       
       backgroundColor: Colors.red[00],
