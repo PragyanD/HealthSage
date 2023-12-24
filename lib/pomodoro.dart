@@ -42,7 +42,7 @@ class _pomodoroPageState extends State<pomodoroPage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         title: Center(
-        child: Text('Pomodoro'),
+        child: Text('Pomodoro Timer'),
         ),
         elevation: 0, 
         actions: [
@@ -53,13 +53,13 @@ class _pomodoroPageState extends State<pomodoroPage> {
       
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},//modify
-        backgroundColor: Colors.red[400],
+        backgroundColor: Colors.red[500],
         hoverColor: Colors.green[300],
         elevation: 5,
 
       ),
       
-        body: Center(child: time_input(minute :23)), 
+        body: Center(child: time_input(minute :25)), 
       // TimePickerDialog(
       //   initialTime: TimeOfDay(
       //     hour: 0, 

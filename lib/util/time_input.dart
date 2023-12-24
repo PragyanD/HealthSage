@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class time_input extends StatelessWidget {
-  int minute;
-  int seconds;
-  time_input({super.key, this.minute = 25, this.seconds = 0});
+  DateTime date;
+  time_input({super.key, date = DateTime(minute: 25)})
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,7 @@ class time_input extends StatelessWidget {
         
         children: [
         Text(
-          "Time left",
+          "Time Remaining",
           style: TextStyle(fontSize: 20),
           ),
         const SizedBox(height: 30,),
